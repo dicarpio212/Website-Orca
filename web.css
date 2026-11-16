@@ -1,0 +1,528 @@
+:root {
+  --warnabiru: #0284c7;
+  --warnabirumuda: #06a8f9;
+  --warnabiruterang: #e0f2fe;
+  --warnaabu: #374153;
+  --warnaabuteks: #a3a4a7;
+  --warnaabutembus: #dedede;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+p {
+  font-weight: 500;
+}
+
+body {
+  background-color: white;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 13rem;
+  padding-top: 8rem;
+}
+/* 
+body::-webkit-scrollbar {
+  display: none;
+} */
+
+/* Home */
+#home {
+  width: 100%;
+  padding: 0 7.5%;
+  box-sizing: border-box;
+  display: flex;
+  background-image: radial-gradient(
+    rgba(31, 244, 255, 0.101),
+    rgba(31, 244, 255, 0.093) 2%,
+    rgba(31, 244, 255, 0.098) 2%,
+    rgba(31, 244, 255, 0.084) 2%,
+    white
+  );
+  transition: 0.3s ease;
+  opacity: 0;
+  transform: translateY(-100px);
+}
+
+#home.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#home .deskripsiBarang {
+  width: 100%;
+  flex: 1.8;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+#home .deskripsiBarang .mercy {
+  padding: 0.4rem 0;
+  width: 11rem;
+  text-align: center;
+  background-color: var(--warnabiruterang);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 99px;
+  color: var(--warnabiru);
+  font-weight: 800;
+}
+
+#home .deskripsiBarang .mercy div {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--warnabiru);
+  margin-right: 0.4rem;
+  position: relative;
+  top: 1.5px;
+  border-radius: 50%;
+}
+
+#home .deskripsiBarang h1 {
+  color: var(--warnabiru);
+  font-size: 3.5rem;
+  text-shadow: 0 3px 7px rgba(0, 0, 0, 0.404);
+}
+
+#home .deskripsiBarang h1 span {
+  color: black;
+}
+
+#home .deskripsiBarang h3 {
+  color: var(--warnaabu);
+  font-size: 2rem;
+}
+
+#home .deskripsiBarang p {
+  color: var(--warnaabuteks);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+#home .deskripsiBarang .buttonNav {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.3rem;
+}
+
+#home .deskripsiBarang .buttonNav a {
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 600;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+#home .deskripsiBarang .buttonNav a:nth-child(1) {
+  color: white;
+  background-color: var(--warnabiru);
+  border: none;
+}
+
+#home .deskripsiBarang .buttonNav a:nth-child(2) {
+  border: 2px solid var(--warnaabutembus);
+  color: var(--warnaabu);
+  background-color: white;
+}
+
+#home .gambarBarang {
+  width: 150%;
+  flex: 1.5;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+#home .gambarBarang .wadahGambar {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 0 30px 10px rgba(71, 71, 71, 0.293);
+}
+
+#home .gambarBarang .wadahGambar img {
+  width: 100%;
+  height: 100%;
+}
+
+/* About */
+#about {
+  width: 100%;
+  padding: 0 7.5%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s ease;
+  transform: translateX(-100px);
+  opacity: 0;
+}
+
+#about.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+#about .judulAboutPertama,
+#about .judulAboutKedua,
+#about .teksAbout {
+  text-align: center;
+}
+
+#about .judulAboutPertama {
+  font-size: 1rem;
+  color: var(--warnabiru);
+}
+
+#about .judulAboutKedua {
+  font-size: 2rem;
+  color: var(--warnaabu);
+}
+
+#about .teksAbout {
+  font-size: 1rem;
+  margin-top: 0.6rem;
+  margin: 0.6rem auto 0 auto;
+  width: 43%;
+  color: var(--warnaabuteks);
+}
+
+#about .keunggulan {
+  width: 100%;
+  display: flex;
+  margin-top: 5rem;
+  gap: 2rem;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+#about .keunggulan div {
+  box-sizing: border-box;
+  border: 2px solid var(--warnaabutembus);
+  border-radius: 17px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 0.5rem;
+}
+
+#about .keunggulan div svg {
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--warnabiruterang);
+  padding: 0.6rem;
+  border-radius: 7px;
+  box-sizing: border-box;
+  stroke: var(--warnabiru);
+}
+
+#about .keunggulan div p {
+  color: var(--warnaabuteks);
+  margin-top: 0.3rem;
+}
+
+/* Promotion */
+
+#promotion {
+  width: 100%;
+  padding: 7rem 7.5%;
+  box-sizing: border-box;
+  display: flex;
+  background-color: #0c4b6e;
+  transition: 0.3s ease;
+  opacity: 0;
+  transform: translateX(100px);
+  visibility: hidden;
+}
+
+#promotion.active {
+  opacity: 1;
+  transform: translateX(0);
+  visibility: visible;
+}
+
+#promotion .deskripsiBarang {
+  width: 100%;
+  flex: 1.8;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  gap: 0.5rem;
+}
+
+#promotion .deskripsiBarang .judulPromotionPertama {
+  color: var(--warnabirumuda);
+  font-size: 1rem;
+}
+
+#promotion .deskripsiBarang .judulPromotionKedua {
+  color: white;
+  font-size: 2.3rem;
+  line-height: 1.2;
+}
+
+#promotion .deskripsiBarang .judulPromotionKedua span {
+  color: var(--warnabirumuda);
+}
+
+#promotion .deskripsiBarang .teksPromotion {
+  color: white;
+  margin-top: 1rem;
+}
+
+#promotion .deskripsiBarang .pointPromotion {
+  width: 100%;
+  margin-top: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  padding: 0.4rem;
+  gap: 1rem;
+}
+
+#promotion .deskripsiBarang .pointPromotion .card {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 3.5rem 1fr;
+  grid-template-rows: calc(3.5rem / 2) calc(3.5rem / 2);
+  grid-template-areas: "gambar judul" "gambar teks";
+  justify-content: center;
+  align-items: center;
+}
+
+#promotion .deskripsiBarang .pointPromotion .card svg {
+  grid-area: gambar;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0.85rem;
+  background-color: rgba(254, 255, 255, 0.172);
+  stroke: white;
+  border-radius: 8px;
+  border: 1px solid var(--warnabiru);
+}
+
+#promotion .deskripsiBarang .pointPromotion .card h3 {
+  grid-area: judul;
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+  color: white;
+  align-self: end;
+}
+
+#promotion .deskripsiBarang .pointPromotion .card p {
+  grid-area: teks;
+  margin-top: 0.4rem;
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--warnaabuteks);
+  align-self: start;
+}
+
+#promotion .gambarBarang {
+  width: 150%;
+  flex: 1.5;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+#promotion .gambarBarang .wadahGambar {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 0 30px 10px rgba(114, 114, 114, 0.717);
+  position: relative;
+}
+
+#promotion .gambarBarang .wadahGambar::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 8rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.896) 90%);
+}
+
+#promotion .gambarBarang .wadahGambar img {
+  width: 100%;
+  height: 100%;
+  transition: 0.2s ease;
+}
+
+#promotion .gambarBarang .wadahGambar:hover img {
+  transform: scale(1.05);
+}
+
+#promotion .gambarBarang .wadahGambar h4,
+#promotion .gambarBarang .wadahGambar h5 {
+  position: absolute;
+  /* z-index: 3; */
+  text-shadow: 0 0 7px black;
+  z-index: 1;
+}
+
+#promotion .gambarBarang .wadahGambar h4 {
+  bottom: 2.5rem;
+  left: 1.5rem;
+  font-size: 1.2rem;
+  color: white;
+}
+
+#promotion .gambarBarang .wadahGambar h5 {
+  bottom: 1rem;
+  left: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--warnabirumuda);
+}
+
+/* Footer */
+#footerContent {
+  width: 100%;
+  padding: 0 7.5%;
+  box-sizing: border-box;
+  display: flex;
+  margin-bottom: 2rem;
+  transition: 0.2s ease;
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+#footerContent.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#footerContent .logoAlamat {
+  flex: 2;
+  padding: 0 1rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+}
+
+#footerContent .logoAlamat .logo {
+  width: 100%;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+}
+
+#footerContent .logoAlamat .logo .wadahLogo {
+  width: 2.5rem;
+  height: 2.5rem;
+  /* box-sizing: border-box; */
+  /* border: 1px solid red; */
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+#footerContent .logoAlamat .logo .wadahLogo img {
+  width: 104%;
+  position: relative;
+  left: -0.8px;
+}
+
+#footerContent .logoAlamat .logo h2 {
+  font-size: 2rem;
+  margin-left: 0.4rem;
+  color: var(--warnabiru);
+}
+
+#footerContent .logoAlamat p {
+  width: 22rem;
+  color: var(--warnaabu);
+}
+
+#footerContent .logoAlamat .alamat {
+  display: flex;
+  align-items: center;
+}
+
+#footerContent .logoAlamat .alamat svg {
+  stroke: var(--warnabiru);
+}
+
+#footerContent .logoAlamat .alamat p {
+  margin-left: 0.8rem;
+}
+
+#footerContent .kontakEmail {
+  flex: 1.6;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#footerContent .kontakEmail h1 {
+  font-size: 1.6rem;
+}
+
+#footerContent .kontakEmail .card {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 3.5rem 1fr;
+  grid-template-rows: calc(3.5rem / 2) calc(3.5rem / 2);
+  grid-template-areas: "gambar judul" "gambar teks";
+  justify-content: center;
+  align-items: center;
+}
+
+#footerContent .kontakEmail .card svg {
+  grid-area: gambar;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0.85rem;
+  background-color: var(--warnabiruterang);
+  stroke: var(--warnabiru);
+  border-radius: 50%;
+}
+
+#footerContent .kontakEmail .card p {
+  grid-area: judul;
+  margin-left: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--warnaabu);
+  align-self: center;
+}
+
+#footerContent .kontakEmail .card span {
+  grid-area: teks;
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  color: black;
+  font-weight: 500;
+  align-self: start;
+  position: relative;
+  top: -6px;
+}
+
+/* footerrrr */
+
+footer {
+  width: 85%;
+  margin: 0 7.5%;
+  text-align: center;
+  padding: 4rem 0;
+  border-top: 2px solid var(--warnaabu);
+  transition: 0.2s ease;
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+footer.active {
+  opacity: 1;
+  transform: translateY(0);
+}
